@@ -1,0 +1,30 @@
+{
+    "name": "simple-swoole/skeleton",
+    "type": "project",
+    "description": "A simple, lightweight and high-performance PHP coroutine framework.",
+    "keywords": [
+        "php",
+        "swoole",
+        "coroutine",
+        "simple",
+        "simps"
+    ],
+    "license": "Apache-2.0",
+    "require": {
+        "php": ">=7.1",
+        "ext-swoole": ">=4.4",
+        "simple-swoole/simps": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": ["app/functions.php"]
+    },
+    "bin": [
+        "bin/simps.php"
+    ],
+    "config": {
+        "optimize-autoloader": true
+    }
+}
