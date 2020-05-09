@@ -32,7 +32,7 @@ class IndexController
         $client = new MQTTClient($conConfig);
         $data = $client->connect();
         if ($data['cmd'] !== 2 && $data['code'] !== 0) {
-            $response->end("connect error, see https://help.aliyun.com/document_detail/148610.html");
+            $response->end("connect error, error code：{$data['code']}, see https://help.aliyun.com/document_detail/148610.html");
         }
         $time = time();
         $client->publish("/{$config['product_key']}/{$config['device_name']}/user/update", "Hello,Simps " . $time);
