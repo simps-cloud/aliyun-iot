@@ -14,9 +14,9 @@ git clone git@github.com:simps-cloud/aliyun-iot.git
 
 ## 使用
 
-1. 前往 [阿里云物联网平台](https://iot.console.aliyun.com) 创建产品和设备，[参考文档](https://help.aliyun.com/document_detail/73705.html)
+* 前往 [阿里云物联网平台](https://iot.console.aliyun.com) 创建产品和设备，[参考文档](https://help.aliyun.com/document_detail/73705.html)
 
-2. 创建`config/aliyuniot.php`配置文件
+* 创建`config/aliyuniot.php`配置文件
 
 ```php
 <?php
@@ -33,8 +33,19 @@ return [
 ];
 ```
 
-3. 订阅
+* 订阅
 
-```php
+```shell
 php bin/subscribe.php
 ```
+* 发布
+
+```shell
+php bin/simps.php http:start
+
+curl http://127.0.0.1:9501/
+```
+
+🎉详细说明参考博客[《基于Swoole使用MQTT协议连接阿里云物联网平台设备实现消息订阅》](https://qq52o.me/2752.html)
+
+⭐️支持请前往点个Star：[Simps](https://github.com/simple-swoole/simps)
