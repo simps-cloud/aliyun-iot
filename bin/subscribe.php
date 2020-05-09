@@ -40,8 +40,8 @@ Co\run(function () use ($config, $conConfig) {
     $client->subscribe($topics);
     while (true) {
         $buffer = $client->recv();
-        var_dump($buffer);
         if (is_array($buffer)) {
+            var_dump($buffer);
             switch ($buffer['cmd']) {
                 case 9:
                     echo "收到订阅确认消息\r\n";
