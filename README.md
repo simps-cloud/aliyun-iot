@@ -46,6 +46,8 @@ php bin/simps.php http:start
 curl http://127.0.0.1:9501/
 ```
 
+⚠️内置的 MQTTClient 已标记废弃，请使用 [simps/mqtt](https://github.com/simps/mqtt)
+
 🎉详细说明参考博客[《基于Swoole使用MQTT协议连接阿里云物联网平台设备实现消息订阅》](https://qq52o.me/2752.html)
 
 ⭐️支持请前往点个Star：[Simps](https://github.com/simple-swoole/simps)
